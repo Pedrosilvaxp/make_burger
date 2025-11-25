@@ -1,26 +1,45 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <NavBar :logo="logo_src" :alt="app_name"/>
+  <router-view/>
+  <FooterLink/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from '@/components/NavBar.vue';
+import FooterLink from '@/components/FooterLink.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavBar,
+    FooterLink
+  },
+  data() {
+    return {
+      logo_src: "./public/img/logoin.png",
+      app_name: "Make your burger"
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: Helvetica;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: 50px;
+  min-height: 250px;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #222;
 }
 </style>
