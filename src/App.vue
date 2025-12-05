@@ -16,8 +16,10 @@ export default {
   },
   data() {
     return {
-      logo_src: "./public/img/logoin.png",
-      app_name: "Make your burger"
+      logo_src: "./img/logoin.png",
+      app_name: "Make your burger",
+      larguraTela: window.innerWidth,
+      ativarMenuMobile: false,
     }
   }
 }
@@ -25,7 +27,7 @@ export default {
 
 <style>
 * {
-  font-family: Helvetica;
+  font-family: Poppins;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -36,10 +38,19 @@ export default {
   min-height: 250px;
 }
 
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
 h1 {
   text-align: center;
   font-size: 42px;
   margin-bottom: 30px;
   color: #222;
+}
+
+@media (max-width: 600px) {
+    header {z-index: 1;}
 }
 </style>

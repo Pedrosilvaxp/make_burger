@@ -1,11 +1,11 @@
 <template>
-    <div id="nav">
-        <router-link>
-            <img :src="logo" :alt="alt" id="logo">
-        </router-link>
-        
-        <router-link to="/">Home</router-link>
-        <router-link to="/pedidos">Pedidos</router-link>
+    <div id="nav" class="bg-white flex items-center justify-around p-3 text-sm sm:text-base">
+        <img id="logo" :src="logo" :alt="alt">
+
+        <div class="flex align-middle justify-around gap-x-2">
+            <router-link to="/">Home</router-link>
+            <router-link to="/pedidos">Pedidos</router-link>
+        </div>
     </div>
 </template>
 
@@ -17,15 +17,6 @@ export default {
 </script>
 
 <style scoped>
-#nav {
-    background-color: #222;
-    border-bottom: 4px solid #111;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
 #nav #logo_url {
     margin: auto;
     margin-left: 0;
@@ -37,12 +28,10 @@ export default {
 }
 
 #nav a {
-    color: yellow;
     text-decoration: none;
-    margin: 12px;
     transition: .5s;
 }
 #nav a:hover {
-    color: white;
+    color: rgba(70, 70, 18, 0.345);
 }
 </style>

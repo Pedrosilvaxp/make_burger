@@ -23,14 +23,14 @@
                     </select>
                 </div>
                 <div id="opcionais-container" class="input-container">
-                    <label id="opcionais-title">Selecione os opcionais</label>
+                    <label id="opcionais-title" class="mb-10 w-96">Selecione os opcionais</label>
                     <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
                         <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
                         <span> {{ opcional.tipo }} </span>
                     </div>
                 </div>
                 <div class="input-container">
-                    <input type="submit" class="submit-btn" value="Criar meu burger">
+                    <input type="submit" class="bg-yellow-300 cursor-pointer" value="Criar meu burger">
                 </div>
             </form>
         </div>
@@ -126,12 +126,15 @@ export default {
     margin-bottom: 15px;
     color: #222;;
     padding: 5px 10px;
-    border-left: 4px solid #fcba03;
+    border-left: 1px solid #fcba03;
+    border-radius: 10px;
   }
 
   input, select {
-    padding: 5px 10px;
+    padding: 10px 15px;
     width: 300px;
+    border: 1px solid #9CACCB;
+    border-radius: 10px;
   }
 
   #opcionais-container {
@@ -140,7 +143,7 @@ export default {
   }
 
   #opcionais-title {
-    width: 100%;
+    /* width: 100%; */
   }
 
   .checkbox-container {
@@ -161,10 +164,7 @@ export default {
   }
 
   .submit-btn {
-    background-color: #222;
-    color:#fcba03;
     font-weight: bold;
-    border: 2px solid #222;
     padding: 10px;
     font-size: 16px;
     margin: 0 auto;
